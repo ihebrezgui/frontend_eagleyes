@@ -1,0 +1,36 @@
+:host {
+  .legend {
+    small {
+      font-size: x-small;
+    }
+  }
+}
+.banner
+{
+  background-image: url('../../../assets/img/avatars/home1.png');
+  height: 150px ;
+  background-position: center top;
+  background-size: cover;
+}
+.banner h1
+{
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  position: fixed;
+  top: 45%; 
+  left: 34.5%; 
+  transform: translate(-50%, -50%);
+}
+.content a:hover
+{
+  background-color: var(--primary-color);
+  color: white;
+}
+.stepBox
+{
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 10px ;
+  text-align: left;
+}

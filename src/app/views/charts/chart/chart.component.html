@@ -1,0 +1,20 @@
+<ejs-chart id="chart-container" [primaryXAxis]="primaryXAxis" [primaryYAxis]="primaryYAxis"
+           [legendSettings]="legendSettings" [tooltip]="tooltip" [title]="title">
+  <e-series-collection>
+    <e-series [dataSource]="chartData" type="Line" xName="hour" yName="value" [name]="selectedValue"
+              [marker]="marker"></e-series>
+  </e-series-collection>
+</ejs-chart>
+
+<select [(ngModel)]="selectedCellName" (change)="filterDataCsv()">
+  <option value="" selected>Tout</option>
+  <option *ngFor="let name of cellNames" [value]="name">{{ name }}</option>
+</select>
+
+<select [(ngModel)]="selectedValue" (change)="filterDataCsv()" >
+  <option value="Integrité">Integrité</option>
+  <option value="Accessibilité">Accessibilité</option>
+  <option value="Rétention">Rétention</option>
+  <option value="Mobilité">Mobilité</option>
+  <option value="Trafic">Trafic</option>
+</select>
